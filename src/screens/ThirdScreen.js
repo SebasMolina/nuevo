@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Button  } from "react-native";
+import styles from './Styles'
 
 export default function ThirdScreen( {navigation} ) {
     /*
@@ -21,14 +22,14 @@ export default function ThirdScreen( {navigation} ) {
     }
     
     return(
-        <View>
-            <Text style={{ marginTop: 150, fontSize: 34 }}> THIRD SCREEN </Text>
-            
+        <View style={styles.container}>
+            <Text style={styles.text}> THIRD SCREEN </Text>
+            <View style={styles.space}></View>
             <Button title='VOLVER' onPress={() => volver()}/>
-
-            <Button title='Primer Pantalla' onPress={() => goToFirstScreen()}/>
-            
-            <Button title='Segunda Pantalla' onPress={() => goToSecondScreen()}/>            
+            <View style={styles.space}></View>
+            <Button  title='Primer Pantalla' onPress={() => goToFirstScreen()} color='blue'/>
+            <View style={styles.space}></View>
+            <Button title='Segunda Pantalla' onPress={() => goToSecondScreen()} color= 'red'/>            
 
         </View>
     )
